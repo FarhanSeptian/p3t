@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3T - Pertolongan Pertama Pada Tubes | Rental Toolkit & Jasa Teknis Mahasiswa</title>
+    <!-- Menggunakan CSS murni yang bersih & proper tanpa warning CDN production -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1F4E78;
+            --secondary: #2F5597;
+            --accent: #28a745;
+            --bg-light: #F8F9FA;
+            --text-dark: #333333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        /* Navbar */
+        nav { background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1100px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .btn-nav { background: var(--primary); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .btn-nav:hover { background: var(--secondary); }
+
+        /* Hero Section */
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 130px 20px 80px 20px; text-align: center; }
+        .hero-content { max-width: 800px; margin: auto; }
+        .hero-content h1 { font-size: 38px; margin-bottom: 20px; font-weight: 800; }
+        .hero-content p { font-size: 18px; margin-bottom: 30px; color: #E9EEF4; }
+        .btn-cta { background: var(--accent); color: white; padding: 14px 28px; border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.2s; }
+        .btn-cta:hover { transform: translateY(-2px); background: #218838; }
+
+        /* Image Banner Container */
+        .banner-container { max-width: 900px; margin: -40px auto 40px auto; padding: 0 20px; position: relative; z-index: 10; }
+        .banner-container img { width: 100%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+
+        /* Section Styling */
+        section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+        .section-title { text-align: center; font-size: 30px; color: var(--primary); margin-bottom: 40px; font-weight: bold; }
+
+        /* Pricing Cards */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .pricing-card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); text-align: center; transition: transform 0.3s; }
+        .pricing-card:hover { transform: translateY(-5px); }
+        .pricing-card.featured { border-top-color: var(--accent); position: relative; }
+        .badge { background: var(--accent); color: white; font-size: 12px; padding: 4px 10px; border-radius: 20px; position: absolute; top: -12px; right: 20px; font-weight: bold; }
+        .pricing-card h3 { font-size: 22px; color: var(--primary); margin-bottom: 15px; }
+        .price { font-size: 28px; font-weight: bold; color: var(--secondary); margin-bottom: 20px; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 25px; }
+        .pricing-features li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; color: #555; display: flex; align-items: center; gap: 8px; }
+        .pricing-features li i { color: var(--accent); }
+
+        /* Features / Services Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .feature-box { background: white; padding: 25px; border-radius: 10px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.04); }
+        .feature-box i { font-size: 36px; color: var(--primary); margin-bottom: 15px; }
+        .feature-box h4 { font-size: 18px; margin-bottom: 10px; color: var(--primary); }
+        .feature-box p { font-size: 13px; color: #666; }
+
+        /* Footer */
+        footer { background: #111827; color: white; text-align: center; padding: 40px 20px; margin-top: 40px; }
+        footer p { color: #9CA3AF; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fas fa-toolbox"></i> P3T</a>
+            <a href="#kontak" class="btn-nav">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header>
+        <div class="hero-content">
+            <h1>Jangan Biarkan Alat Rusak Menggagalkan Tugas Besarmu!</h1>
+            <p>P3T (Pertolongan Pertama Pada Tubes) menyediakan rental toolkit praktikum terkurasi & jasa teknis kilat khusus mahasiswa rekayasa.</p>
+            <a href="#harga" class="btn-cta"><i class="fab fa-whatsapp"></i> Lihat Paket & Sewa Sekarang</a>
+        </div>
+    </header>
+
+    <!-- Image Banner Preview -->
+    <div class="banner-container">
+        <img src="jurusan-teknik-elektro.jpeg" alt="P3T Banner Layanan Sewa Alat dan Jasa Teknis">
+    </div>
+
+    <!-- Features / Layanan Utama -->
+    <section>
+        <h2 class="section-title">Kenapa Harus P3T?</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-suitcase"></i>
+                <h4>Toolkit Modular</h4>
+                <p>Koper perkakas elektronika dan mekanik siap pakai serta terkalibrasi.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-bolt"></i>
+                <h4>Jasa Teknis Kilat</h4>
+                <p>Bantuan cetak PCB, desain 3D casing, dan web dashboard IoT darurat.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-wallet"></i>
+                <h4>Harga Mahasiswa</h4>
+                <p>Hemat hingga 80% dibanding membeli instrumen ukur baru secara mandiri.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-clock"></i>
+                <h4>Emergency Drop-Point</h4>
+                <p>Akses pengambilan alat fleksibel saat laboratorium kampus tutup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="harga">
+        <h2 class="section-title">Pilihan Paket Layanan & Harga</h2>
+        <div class="pricing-grid">
+            
+            <!-- Paket 1 -->
+            <div class="pricing-card">
+                <h3>Paket Harian</h3>
+                <div class="price">Rp 50.000 <span style="font-size: 14px; color: #777;">/ hari</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> 1 Set Koper Toolkit Standar</li>
+                    <li><i class="fas fa-check"></i> Multimeter & Solder Station</li>
+                    <li><i class="fas fa-check"></i> Durasi sewa fleksibel (24 Jam)</li>
+                    <li><i class="fas fa-check"></i> Dukungan konsultasi dasar</li>
+                </ul>
+                <a href="https://wa.me/6285123699600?text=Halo%20P3T,%20saya%20ingin%20pesan%20Paket%20Harian" class="btn-nav" style="display: block; text-align: center;">Pilih Paket</a>
+            </div>
+
+            <!-- Paket 2 (Featured) -->
+            <div class="pricing-card featured">
+                <div class="badge">Paling Populer</div>
+                <h3>Paket Weekend</h3>
+                <div class="price">Rp 120.000 <span style="font-size: 14px; color: #777;">/ 3 hari</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Koper Toolkit Lengkap & Komponen</li>
+                    <li><i class="fas fa-check"></i> Gratis 1x Cek / Bantuan Aslab</li>
+                    <li><i class="fas fa-check"></i> Prioritas layanan drop-point malam</li>
+                    <li><i class="fas fa-check"></i> Cocok untuk pengerjaan tugas besar akhir pekan</li>
+                </ul>
+                <a href="https://wa.me/6285123699600?text=Halo%20P3T,%20saya%20ingin%20pesan%20Paket%20Weekend" class="btn-cta" style="display: block; text-align: center; padding: 10px; font-size: 16px;">Pilih Paket</a>
+            </div>
+
+            <!-- Paket 3 -->
+            <div class="pricing-card">
+                <h3>Jasa Teknis Kilat</h3>
+                <div class="price">Mulai Rp 75.000</div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Desain & Layout PCB Cepat</li>
+                    <li><i class="fas fa-check"></i> Pemodelan 3D Casing / Mekanik</li>
+                    <li><i class="fas fa-check"></i> Setup Web Dashboard / IoT (ESP32)</li>
+                    <li><i class="fas fa-check"></i> Garansi revisi & bimbingan hasil</li>
+                </ul>
+                <a href="https://wa.me/6285123699600?text=Halo%20P3T,%20saya%20ingin%20konsultasi%20Jasa%20Teknis%20Kilat" class="btn-nav" style="display: block; text-align: center;">Pilih Jasa</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Kontak -->
+    <footer id="kontak">
+        <h3>P3T (Pertolongan Pertama Pada Tubes)</h3>
+        <p style="margin: 10px 0;">Kampus Institut Teknologi Sumatera, Lampung Selatan</p>
+        <p>WhatsApp: 0812-3456-7890 | Instagram: @p3t.official</p>
+        <p style="margin-top: 20px;">&copy; 2026 P3T. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
